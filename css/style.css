@@ -1,0 +1,6 @@
+body {
+    justify-items: center;
+    height: 100vh;
+    align-content: center;
+    background: linear-gradient(15deg, khaki, transparent);
+}
