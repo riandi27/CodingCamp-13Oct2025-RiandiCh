@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List Riandi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List Riandi</title>
 
-    <!-- CSS External File -->
-    <link rel="stylesheet" href="css\style.css">
+  <!-- CSS External File -->
+  <link rel="stylesheet" href="css/style.css"/>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
-    <!-- Header Section -->
-    <header></header>
+<body class="p-6">
+  <!-- Header Section -->
+  <header class="mb-4">
     <h1 class="text-3xl font-bold">Todo List</h1>
-    <!-- Main Content Section -->
-    <main>
-        <section class="todo-app my-4">
-            <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a new task..."/>
-            <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date"/>
-            <button class="bg-gray-500 text-white rounded p-2 w-15" onclick="addTask();">+</button>
-        </section>
+  </header>
 
-        <!-- Action Button Section -->
-        <section class="flex justify-between my-4">
-            <button class="bg-yellow-500 text-black rounded p-2" id="filter-button">Filter</button>
-            <button class="bg-gray-500 text-white rounded p-2" id="delete-all-button">Delete All</button>
-        </section>
+  <!-- Main Content Section -->
+  <main>
+    <section class="todo-app my-4 flex gap-2 items-center">
+      <input type="text" class="border rounded p-2 flex-1" id="todo-input" placeholder="Add a new task..."/>
+      <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date"/>
+      <button class="bg-gray-500 text-white rounded p-2 w-16" id="add-button" onclick="addTask()">+</button>
+    </section>
 
-        <section>
-            <h2 class="text-2xl">List of Tasks</h2>
-            <ul id="task-list">
-                <!-- Tasks will be dinamically added here -->
-                 <li>No task found</li>
-            </ul>
+    <!-- Action Button Section -->
+    <section class="flex justify-between my-4">
+      <button class="bg-yellow-500 text-black rounded p-2" id="filter-button">Filter</button>
+      <button class="bg-gray-500 text-white rounded p-2" id="delete-all-button">Delete All</button>
+    </section>
 
-        </section>
+    <section>
+      <h2 class="text-2xl mb-2">List of Tasks</h2>
+      <ul id="task-list" class="list-disc pl-5 space-y-1">
+        <!-- Tasks will be dynamically added here -->
+        <li class="text-gray-500 italic" id="empty-state">No task found</li>
+      </ul>
+    </section>
+  </main>
 
-    </main>
+  <!-- Footer Section -->
+  <footer class="mt-8">
+    <p class="text-xs">&copy; 2025 Riandi Todo List App</p>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer>
-        <p class="text-xs">&copy; 2025 Riandi Todo List App</p>
-    </footer>
-
-    <!-- JavaScript External File -->
-    <script src="js\script.js"></script>
-    
-
+  <!-- JavaScript External File -->
+  <script src="js/script.js"></script>
 </body>
 </html>
